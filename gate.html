@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Enter the Site &mdash; Don &amp; Adriana</title>
+
+
+<!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet">
+
+  <style>
+/* Custom cursor */
+* {
+cursor: url(https://ani.cursors-4u.net/symbols/sym-8/sym752.cur), auto !important;
+}
+body {
+margin: 0;
+font-family: 'Libre Baskerville', serif;
+background: pink;
+color: #222;
+text-align: center;
+padding: 60px 20px;
+}
+.flower-frame {
+display: inline-block;
+padding: 20px;
+border: 20px solid transparent;
+background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Undertale_red_soul.svg/30px-Undertale_red_soul.svg.png') repeat;
+background-size: 10px 10px;
+background-position: 0 0;
+}
+.password-box {
+background: #fff;
+padding: 24px 32px;
+max-width: 400px;
+margin: auto;
+}
+h1 {
+margin: 0 0 12px;
+font-family: 'Pinyon Script', cursive;
+font-size: 2.5rem;
+color: #e91e63;
+}
+p {
+margin: 0 0 18px;
+font-size: 1rem;
+}
+form {
+display: flex;
+flex-direction: column;
+gap: 12px;
+align-items: center;
+}
+input[type="password"] {
+padding: 10px 12px;
+border-radius: 6px;
+border: 1px solid #aaa;
+font-size: 1rem;
+width: 100%;
+box-sizing: border-box;
+font-family: 'Libre Baskerville', serif;
+}
+button {
+padding: 10px 14px;
+border-radius: 6px;
+border: 2px outset #e91e63;
+background: #ffb6c1;
+color: #000;
+font-weight: bold;
+cursor: pointer;
+font-family: 'Libre Baskerville', serif;
+}
+button:hover {
+background: #ffcce0;
+}
+#msg {
+margin-top: 12px;
+min-height: 1em;
+}
+.shake {
+animation: shake 0.5s ease;
+}
+@keyframes shake {
+0% { transform: translate(0,0); }
+20% { transform: translate(-5px,0); }
+40% { transform: translate(5px,0); }
+60% { transform: translate(-5px,0); }
+80% { transform: translate(5px,0); }
+100% { transform: translate(0,0); }
+}
+  </style>
+</head>
+<body>
+
+<br>
+
+<br>
+
+<br>
+
+<div class="flower-frame" id="card">
+<div class="password-box">
+<p>Please enter the password to continue:</p>
+
+<form id="pwForm" autocomplete="off">
+  <input id="pw" placeholder="Password" aria-label="Password" required="" type="password"><button type="submit">Enter</button>
+</form>
+
+<div id="msg" role="status" aria-live="polite"></div>
+
+</div>
+
+</div>
+
+<p style="margin-top: 40px; color: rgb(51, 51, 51);"><br>
+
+</p>
+
+<script>
+const PASSWORD = "onyx"; // chosen password
+const REDIRECT_TO = "home.html"; // target page
+const form = document.getElementById('pwForm');
+const pw = document.getElementById('pw');
+const msg = document.getElementById('msg');
+form.addEventListener('submit', function(e){
+e.preventDefault();
+if (pw.value === PASSWORD) {
+// show granted.gif
+msg.innerHTML = `
+<img src="granted.gif" alt="Access Granted" style="max-width:150px; margin-top:10px;">
+<br>
+<button id="proceedBtn" style="margin-top:12px;">Proceed</button>
+`;
+pw.value = "";
+form.style.display = "none"; // hide password form
+// attach click to proceed button
+document.getElementById('proceedBtn').addEventListener('click', () => {
+window.location.href = REDIRECT_TO;
+});
+} else {
+// show denied.gif
+msg.innerHTML = '<img src="denied.gif" alt="Access Denied" class="shake" style="max-width:150px; margin-top:10px;">';
+pw.value = "";
+pw.focus();
+}
+});
+pw.addEventListener('input', () => {
+if (msg.innerHTML) msg.innerHTML = "";
+});
+</script>
+</body>
+</html>
