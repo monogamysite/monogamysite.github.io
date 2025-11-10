@@ -3,14 +3,26 @@
 <head>
   <title>Don and Adriana's wedding site</title>
 
-
   <style>
+/* Cursor */
+* {
+cursor: url(https://ani.cursors-4u.net/symbols/sym-8/sym752.cur), auto !important;
+}
+
+/* Main body */
+body {
+color: #ffffff;
+background-color: pink;
+font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+/* 90s nav bar */
 .nav90s {
 background-color: pink;
 color: black;
 text-align: center;
-font-family: "Comic Sans MS", "Comic Sans", cursive;
-font-size: 16px;
+font-family: "Brush Script MT", cursive;
+font-size: 20px;
 padding: 10px;
 border-bottom: 2px solid black;
 }
@@ -19,25 +31,15 @@ color: black;
 text-decoration: none;
 margin: 0 6px;
 }
-  </style>
-  <style type="text/css">
-* {
-cursor: url(https://ani.cursors-4u.net/symbols/sym-8/sym752.cur), auto !important;
-}
-body {
-color: #ffffff;
-background-color: pink;
-}
-/* Decorative flower (heart) frame */
+
+/* Decorative frame (unchanged) */
 .flower-frame {
 display: inline-block;
-padding: 20px; /* space between image and frame */
+padding: 20px;
 border: 20px solid transparent;
-/* tiled heart background */
 background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Undertale_red_soul.svg/30px-Undertale_red_soul.svg.png') repeat;
 background-size: 10px 10px;
-/* align tiles cleanly with the border */
-background-position: 0 0; /* try 18px 0, 0 18px, or 18px 18px for alternate shifts */
+background-position: 0 0;
 }
 .flower-frame img {
 display: block;
@@ -45,61 +47,42 @@ display: block;
   </style>
 </head>
 
-
 <body>
 
-<!-- &#10047; Simple 90s-Style Navigation Bar &#10047; -->
-<div class="nav90s"><a href="home.html">Home</a>
-|
-<a href="schedule.html">Schedule</a> |
-<a href="rsvp.html">RSVP</a> |
-<a href="travel.html">Travel Tips</a> |
-<a href="thingstodo.html">Things To Do</a>
-|
-<a href="honeymoon.html"><b>Honeymoon Fund</b></a>
+<div class="nav90s">
+  <a href="home.html">Home</a> |
+  <a href="schedule.html">Schedule</a> |
+  <a href="rsvp.html">RSVP</a> |
+  <a href="travel.html">Travel Tips</a> |
+  <a href="thingstodo.html">Things To Do</a> |
+  <a href="honeymoon.html"><b>Honeymoon Fund</b></a>
 </div>
 
-<style>
-.nav90s {
-background-color: pink;
-color: black;
-text-align: center;
-font-family: 'Libre Baskerville', serif;
-font-size: 16px;
-padding: 10px;
-border-bottom: 2px solid black;
-}
-.nav90s a {
-color: black;
-text-decoration: none;
-margin: 0 6px;
-}
-</style>
 <div style="text-align: center;"><br>
 
 <img src="ravi1.png" alt="Don and Adriana" style="width:10%;height:auto;"><br>
 <img src="ravi2.png" alt="Don and Adriana" style="width:10%;height:auto;"><br>
 <img src="ravi3.png" alt="Don and Adriana" style="width:10%;height:auto;"><br>
 
-  
 <br>
 
 </div>
 
-<span style="color: rgb(0, 0, 0);">
-<center>Your presence is a present! If you’d like to give a gift, we would love some help paying for our honeymoon.
-<form action="https://www.paypal.com/donate" method="post" target="_top"><!-- Identify your business so that you can collect the payments. --><input name="business" value="dalyons@uchicago.edu" type="hidden"><!-- Specify details about the contribution --><input name="no_recurring" value="0" type="hidden"><input name="item_name" value="Honeymoon Fund" type="hidden"><input name="item_number" value="Thank you!" type="hidden"><input name="currency_code" value="USD" type="hidden"><!-- Display the payment button. --><input name="submit" src="https://dondriana.com/button_honeymoon-fund.png" alt="Honeymoon Fund" type="image"><img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" height="1" width="1"></form>
+<center>
+<span style="color:black;">
+Your presence is a present! If you’d like to give a gift, we would love some help paying for our honeymoon.
+</span>
 
+<form action="https://www.paypal.com/donate" method="post" target="_top">
+<input name="business" value="dalyons@uchicago.edu" type="hidden">
+<input name="no_recurring" value="0" type="hidden">
+<input name="item_name" value="Honeymoon Fund" type="hidden">
+<input name="item_number" value="Thank you!" type="hidden">
+<input name="currency_code" value="USD" type="hidden">
+<input name="submit" src="https://dondriana.com/button_honeymoon-fund.png" alt="Honeymoon Fund" type="image">
+<img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" height="1" width="1">
+</form>
 </center>
 
-</span>
 </body>
 </html>
-
-
-
-
-
-
-
-
