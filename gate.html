@@ -10,7 +10,17 @@
 
 <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet">
+@font-face {
+  font-family: 'ComicSans';
+  src: url('ComicSans.woff2') format('woff2'),
+       url('ComicSans.woff') format('woff');
+}
 
+body {
+  font-family: 'ComicSans', cursive;
+}
+
+  
   <style>
 /* Custom cursor */
 * {
@@ -18,7 +28,7 @@ cursor: url(https://ani.cursors-4u.net/symbols/sym-8/sym752.cur), auto !importan
 }
 body {
 margin: 0;
-font-family: 'Comic Sans', 'Comic Sans MS', cursive;
+font-family: 'ComicSans', cursive;
 background: pink;
 color: #222;
 text-align: center;
@@ -153,4 +163,5 @@ if (msg.innerHTML) msg.innerHTML = "";
 </script>
 </body>
 </html>
+
 
